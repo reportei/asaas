@@ -1,0 +1,27 @@
+{
+    "name": "reportei/asaas",
+    "description": "Asaas.com PHP API Wrapper",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Reportei\\Asaas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Paulo",
+            "email": "pedropaulosilvaf@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
