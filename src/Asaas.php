@@ -4,6 +4,7 @@ namespace Reportei\Asaas;
 
 use Reportei\Asaas\Services\Customer;
 use Reportei\Asaas\Services\Subscription;
+use Reportei\Asaas\Services\Payment;
 
 class Asaas
 {
@@ -24,5 +25,10 @@ class Asaas
     public function subscription()
     {
         return new Subscription($this->accessToken, $this->sandbox);
+    }
+
+    public function payment()
+    {
+        return new Payment($this->accessToken, $this->sandbox);
     }
 }
