@@ -11,3 +11,6 @@ composer.json
   // ...
   "reportei/asaas": "dev-main"
 },
+
+# run: composer require reportei/asaas
+# run: composer dump-autoload
