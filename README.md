@@ -1,16 +1,30 @@
-# asaas
-composer.json
+# Reportei Asaas SDK
 
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/reportei/asaas"
+Instalação
+----------
+
+Adicione os seguintes códigos no seu `composer.json`:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/reportei/asaas"
+        }
+    ],
+    "require": {
+        "reportei/asaas": "dev-main"
     }
-],
-"require": {
-  // ...
-  "reportei/asaas": "dev-main"
-},
+}
+```
 
-# run: composer require reportei/asaas
-# run: composer dump-autoload
+Rode os seguintes comandos:
+
+```bash
+composer require reportei/asaas
+```
+
+```bash
+composer dump-autoload
+```
