@@ -23,12 +23,5 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Reportei\\Asaas\\AsaasServiceProvider"
-            ]
-        }
     }
 }
