@@ -18,6 +18,20 @@ class Payment extends Api
         return $response;
     }
 
+    public function getByCustomer($customer_id)
+    {
+        $filters = ['customer' => $customer_id];
+        $response = $this->getAll($filters);
+        return $response[0] ?? null;
+    }
+
+    public function getAll($filters = [])
+    {
+        $url = parent::getUrl();
+        $response = parent::getWithPagination($url, $filters);
+        return $response;
+    }
+
     public function getBarcode($id)
     {
         $url = parent::getUrl() . '/' . $id . '/identificationField';
@@ -29,6 +43,13 @@ class Payment extends Api
     {
         $url = parent::getUrl() . '/' . $id . '/pixQrCode';
         $response = parent::get($url);
+        return $response;
+    }
+
+    public function create($data)
+    {
+        $url = parent::getUrl();
+        $response = parent::post($url, $data);
         return $response;
     }
 }
