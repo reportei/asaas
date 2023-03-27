@@ -15,7 +15,7 @@ class Subscription extends Api
     {
         $url = parent::getUrl() . '/' . $id;
         $response = parent::get($url);
-        return $response;
+        return $response->object === "subscription" ? $response : null;
     }
 
     public function getByCustomer($customer_id)

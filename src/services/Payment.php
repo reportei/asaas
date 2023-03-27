@@ -22,7 +22,7 @@ class Payment extends Api
     {
         $filters = ['customer' => $customer_id];
         $response = $this->getAll($filters);
-        return $response[0] ?? null;
+        return $response ?? null;
     }
 
     public function getAll($filters = [])
@@ -50,6 +50,13 @@ class Payment extends Api
     {
         $url = parent::getUrl();
         $response = parent::post($url, $data);
+        return $response;
+    }
+    
+    public function delete($id)
+    {
+        $url = parent::getUrl() . '/' . $id;
+        $response = parent::delete($url);
         return $response;
     }
 }
