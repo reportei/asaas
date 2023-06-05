@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.0.1"
+        "guzzlehttp/guzzle": "^7.0.1",
+        "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
         "pestphp/pest": "^1.22"

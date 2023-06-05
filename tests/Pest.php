@@ -9,8 +9,13 @@
 |
 */
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
 define("SANDBOX", true);
-define("ACCESS_TOKEN", '$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwNDk3Mzg6OiRhYWNoXzExNmExNjVkLTM3NDUtNDliZS1hMDU4LTcxNDNhYWEwMmM0MQ==');
+define("ACCESS_TOKEN", $_ENV['ASAAS_ACCESS_TOKEN']);
 
 /*
 |--------------------------------------------------------------------------
