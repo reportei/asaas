@@ -144,4 +144,6 @@ test("if the customer been restored", function () {
     $response = $this->customer->restore($customer->id);
     expect($response)->toHaveProperty("deleted");
     expect(false)->toBe($response->deleted);
+
+    $this->customer->delete($customer->id);
 });
