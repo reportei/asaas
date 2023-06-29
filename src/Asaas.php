@@ -3,6 +3,7 @@
 namespace Reportei\Asaas;
 
 use Reportei\Asaas\Services\Customer;
+use Reportei\Asaas\Services\Installment;
 use Reportei\Asaas\Services\Subscription;
 use Reportei\Asaas\Services\Payment;
 
@@ -30,5 +31,10 @@ class Asaas
     public function payment()
     {
         return new Payment($this->accessToken, $this->sandbox);
+    }
+
+    public function installment()
+    {
+        return new Installment($this->accessToken, $this->sandbox);
     }
 }
