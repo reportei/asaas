@@ -52,6 +52,13 @@ class Payment extends Api
         $response = parent::post($url, $data);
         return $response;
     }
+
+    public function refund($id, $data)
+    {
+        $url = parent::getUrl() . '/' . $id . '/refund';
+        $response = parent::post($url, $data);
+        return $response;
+    }
     
     public function delete($id)
     {
