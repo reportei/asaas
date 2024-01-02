@@ -39,6 +39,13 @@ class Customer extends Api
         return $response;
     }
 
+    public function getAllNotifications($id)
+    {
+        $url = parent::getUrl() . '/' . $id . '/notifications';
+        $response = parent::get($url);
+        return $response;
+    }
+
     public function create($data)
     {
         $url = parent::getUrl();
