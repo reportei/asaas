@@ -11,10 +11,10 @@ class Notification extends Api
         parent::__construct($accessToken, $sandbox, self::ENDPOINT);
     }
 
-    public function updateBatch()
+    public function updateBatch($data)
     {
         $url = parent::getUrl() . '/batch';
-        $response = parent::post($url);
+        $response = parent::post($url, $data);
         return $response;
     }
 }
