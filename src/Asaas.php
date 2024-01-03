@@ -4,6 +4,7 @@ namespace Reportei\Asaas;
 
 use Reportei\Asaas\Services\Customer;
 use Reportei\Asaas\Services\Installment;
+use Reportei\Asaas\Services\Notification;
 use Reportei\Asaas\Services\Subscription;
 use Reportei\Asaas\Services\Payment;
 
@@ -36,5 +37,10 @@ class Asaas
     public function installment()
     {
         return new Installment($this->accessToken, $this->sandbox);
+    }
+
+    public function notification()
+    {
+        return new Notification($this->accessToken, $this->sandbox);
     }
 }
