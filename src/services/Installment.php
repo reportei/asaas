@@ -11,6 +11,13 @@ class Installment extends Api
         parent::__construct($accessToken, $sandbox, self::ENDPOINT);
     }
 
+    public function getById($id)
+    {
+        $url = parent::getUrl() . '/' . $id;
+        $response = parent::get($url);
+        return $response;
+    }
+
     public function refund($id)
     {
         $url = parent::getUrl() . '/' . $id . '/refund';
