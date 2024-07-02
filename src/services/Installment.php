@@ -18,6 +18,13 @@ class Installment extends Api
         return $response;
     }
 
+    public function getAllPayments($id)
+    {
+        $url = parent::getUrl() . '/' . $id . '/payments';
+        $response = parent::get($url);
+        return $response;
+    }
+
     public function refund($id)
     {
         $url = parent::getUrl() . '/' . $id . '/refund';
