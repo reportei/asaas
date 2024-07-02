@@ -21,7 +21,7 @@ class Installment extends Api
     public function getAllPayments($id)
     {
         $url = parent::getUrl() . '/' . $id . '/payments';
-        $response = parent::get($url);
+        $response = parent::getWithPagination($url);
         return $response;
     }
 
