@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 class Api
 {
-    const BASE_URL_PRODUCTION = "https://www.asaas.com/api";
+    const BASE_URL_PRODUCTION = "https://api.asaas.com";
     const BASE_URL_SANDBOX = "https://sandbox.asaas.com/api";
     const VERSION = "v3";
     const PAGE_SIZE = 100;
