@@ -1,5 +1,5 @@
 {
-    "name": "reportei/asaas",
+    "name": "reportei-asaas/php-asaas",
     "description": "Asaas.com PHP API Wrapper",
     "type": "library",
     "license": "MIT",
