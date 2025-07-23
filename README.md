@@ -3,7 +3,7 @@
 Instalação
 ----------
 
-Adicione os seguintes códigos no seu `composer.json`:
+<!-- Adicione os seguintes códigos no seu `composer.json`:
 
 ```json
 {
@@ -17,12 +17,12 @@ Adicione os seguintes códigos no seu `composer.json`:
         "reportei/asaas": "dev-main"
     }
 }
-```
+``` -->
 
 Rode os seguintes comandos:
 
 ```bash
-composer require reportei/asaas
+composer require reportei-asaas/php-asaas
 ```
 
 ```bash
