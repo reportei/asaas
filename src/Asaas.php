@@ -2,6 +2,7 @@
 
 namespace Reportei\Asaas;
 
+use Reportei\Asaas\Services\CreditCard;
 use Reportei\Asaas\Services\Customer;
 use Reportei\Asaas\Services\Installment;
 use Reportei\Asaas\Services\Notification;
@@ -42,5 +43,10 @@ class Asaas
     public function notification()
     {
         return new Notification($this->accessToken, $this->sandbox);
+    }
+
+    public function creditCard()
+    {
+        return new CreditCard($this->accessToken, $this->sandbox);
     }
 }
