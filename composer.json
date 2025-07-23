@@ -2,6 +2,13 @@
     "name": "reportei/asaas",
     "description": "Asaas.com PHP API Wrapper",
     "type": "library",
+    "license": "MIT",
+    "keywords": ["asaas", "api", "php", "reportei"],
+    "homepage": "https://github.com/reportei/asaas",
+    "support": {
+        "issues": "https://github.com/reportei/asaas/issues",
+        "source": "https://github.com/reportei/asaas"
+    },
     "autoload": {
         "psr-4": {
             "Reportei\\Asaas\\": "src/",
@@ -15,6 +22,7 @@
         }
     ],
     "require": {
+        "php": ">=7.4",
         "guzzlehttp/guzzle": "^7.0.1"
     },
     "require-dev": {
