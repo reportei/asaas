@@ -53,6 +53,13 @@ class Payment extends Api
         return $response;
     }
 
+    public function update($id, $data)
+    {
+        $url = parent::getUrl() . '/' . $id;
+        $response = parent::post($url, $data);
+        return $response;
+    }
+
     public function payWithCreditCard($id, $data)
     {
         $url = parent::getUrl() . '/' . $id . '/payWithCreditCard';
