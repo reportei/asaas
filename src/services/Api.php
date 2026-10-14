@@ -10,6 +10,8 @@ class Api
     const BASE_URL_SANDBOX = "https://sandbox.asaas.com/api";
     const VERSION = "v3";
     const PAGE_SIZE = 100;
+    const CONNECT_TIMEOUT_SECONDS = 10;
+    const TIMEOUT_SECONDS = 30;
 
     protected $accessToken;
     protected $sandbox;
@@ -21,7 +23,10 @@ class Api
         $this->accessToken = $accessToken;
         $this->sandbox = $sandbox;
         $this->endPoint = $endPoint;
-        $this->client = new Client();
+        $this->client = new Client([
+            'connect_timeout' => self::CONNECT_TIMEOUT_SECONDS,
+            'timeout' => self::TIMEOUT_SECONDS,
+        ]);
     }
 
     public function getUrl()
