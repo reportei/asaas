@@ -6,9 +6,9 @@ class Payment extends Api
 {
     CONST ENDPOINT = 'payments';
 
-    public function __construct($accessToken, $sandbox)
+    public function __construct($accessToken, $sandbox, array $httpOptions = [])
     {
-        parent::__construct($accessToken, $sandbox, self::ENDPOINT);
+        parent::__construct($accessToken, $sandbox, self::ENDPOINT, $httpOptions);
     }
 
     public function getById($id)
