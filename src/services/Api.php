@@ -16,12 +16,12 @@ class Api
     protected $endPoint;
     protected $client;
 
-    public function __construct($accessToken, $sandbox = true, $endPoint = "")
+    public function __construct($accessToken, $sandbox = true, $endPoint = "", array $httpOptions = [])
     {
         $this->accessToken = $accessToken;
         $this->sandbox = $sandbox;
         $this->endPoint = $endPoint;
-        $this->client = new Client();
+        $this->client = new Client($httpOptions);
     }
 
     public function getUrl()

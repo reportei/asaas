@@ -6,9 +6,9 @@ class CreditCard extends Api
 {
     CONST ENDPOINT = 'creditCard';
 
-    public function __construct($accessToken, $sandbox)
+    public function __construct($accessToken, $sandbox, array $httpOptions = [])
     {
-        parent::__construct($accessToken, $sandbox, self::ENDPOINT);
+        parent::__construct($accessToken, $sandbox, self::ENDPOINT, $httpOptions);
     }
 
     public function tokenize($data)

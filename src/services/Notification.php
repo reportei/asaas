@@ -6,9 +6,9 @@ class Notification extends Api
 {
     CONST ENDPOINT = 'notifications';
 
-    public function __construct($accessToken, $sandbox)
+    public function __construct($accessToken, $sandbox, array $httpOptions = [])
     {
-        parent::__construct($accessToken, $sandbox, self::ENDPOINT);
+        parent::__construct($accessToken, $sandbox, self::ENDPOINT, $httpOptions);
     }
 
     public function updateBatch($data)
